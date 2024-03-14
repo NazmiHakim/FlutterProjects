@@ -1,0 +1,51 @@
+
+mixin Running {
+  var slow = 10;
+  var medium = 20;
+  var fast = 30;
+}
+
+
+class Weight {
+  void skinny() {
+    print("Bulk More");
+    }
+  void fat() {
+    print("Move more");
+  }
+}
+
+
+class Person extends Weight with Running {
+  String name;
+  int age;
+  String gender;
+  
+  Person(this.name, this.age, this.gender);
+  
+}
+
+void add(String word1, String word2) {
+  String result;
+  result = word1 + word2;
+  print(result);
+}
+
+void main() {
+  print("Hi!");
+  add("Nazmi ", "Hakim! \n");
+  var person1 = Person("Claude", 25, "Male");
+  print(person1.name);
+  print(person1.age);
+  print(person1.gender);
+  person1.skinny();
+  print("Running Speed : ${person1.fast}");
+  print("\n");
+  
+  var person2 = Person("Miya", 20, "Female");
+  print(person2.name);
+  print(person2.age);
+  print(person2.gender);
+  person2.fat();
+  print("Running Speed : ${person2.slow}");
+}
